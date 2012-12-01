@@ -1,0 +1,480 @@
+\documentclass[11pt]{article}
+\usepackage{mdwlist}
+\usepackage{nameref}
+\addtolength{\textwidth}{50pt}
+\addtolength{\textheight}{50pt}
+\addtolength{\topmargin}{-25pt}
+\addtolength{\evensidemargin}{-25pt}
+\addtolength{\oddsidemargin}{-25pt}
+\begin{document}
+
+\newcounter{rulecounter}
+
+%Redefine the first level
+\renewcommand{\theenumi}{~\thesection \ifnum\value{enumi}<10 0\fi\arabic{enumi}.}
+\renewcommand{\labelenumi}{\theenumi}
+
+%Redefine the second level
+\renewcommand{\theenumii}{~\thesection \ifnum\value{enumi}<10 0\fi\arabic{enumi}.\arabic{enumii}.}
+\renewcommand{\labelenumii}{\theenumii}
+
+%Redefine the third level
+\renewcommand{\theenumiii}{~\thesection \ifnum\value{enumi}<10 0\fi\arabic{enumi}.\arabic{enumii}\alph{enumiii}.}
+\renewcommand{\labelenumiii}{\theenumiii}
+
+\newcommand{\gamerule}[2]{\begin{enumerate*}\setcounter{enumi}{\value{rulecounter}} \item #1 #2\end{enumerate*}\stepcounter{rulecounter}}
+\newcommand{\subrules}[1]{\begin{enumerate*} #1 \end{enumerate*}}
+\newcommand{\subsubrules}[1]{\begin{enumerate*} #1 \end{enumerate*}}
+
+\title{BattleConnection:\\War of Indines}
+\author{Game Design by Brad Murray\\Rules Written by Noah Bogart}
+\date{\today}
+\maketitle
+This document is written for people who've moved beyond casual BattleCon. It may be unofficial, but it's designed to be as close as possible to the creator's intent.  Contained herein is the complete rules-set for BattleCon divested of fluff, theme, and setting. It is intended to be the ultimate authority on the game, detailing the exact nature of the underlying systems.
+
+(Taken directly from the Magic: The Gathering Comp. Rules):
+
+\emph{This document includes a series of numbered rules followed by a glossary. Many of the numbered rules are divided into subrules, and each separate rule and subrule of the game has its own number.}
+
+Obviously, regardless of how detailed any rules set is, situations will arise where the rules do not provide a complete answer. In such a case, Brad et al. at Level 99 Games can and should be contacted, preferably through the BattleCon Facebook page or BoardGameGeek entry.
+
+My name is Noah, and I can be reached at nbtheduke@gmail.com
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Game Concepts}
+\label{sec:first}
+
+\gamerule{General}{
+  \label{gameconceptsgeneral}
+  \subrules{
+    \item These BattleCon rules apply to any BattleCon game with two or more players, including two-player games and multiplayer variants.
+    \item To play, each player needs:
+    \subsubrules{
+      \item Their own set of six (6) base cards;
+      \item A set of seven (7) style cards, all from the same character;
+      \item Distinct items for tracking Character tokens;
+      \item Some means of tracking both life totals and the turn number. 
+      } 
+    \item The players also need a game board to track character position, and distinct items which represent their character on the board. For multiplayer variants, a game board with two movement tracks is necessary.
+    \subsubrules{\item The Complete First Edition boxed set contains all of the items necessary to play. Nothing contained within is illegal for use in any official setting.}
+    \item Casual variants may require other items, such as specially marked cards or dice.
+    \item A match of BattleCon consists of two to three duels (for duels, see rule XXX). The winner of the match is the player who wins two of the duels.
+    \item Most BattleCon tournaments will have additional rules, which are contained later on. See Chapter XXX for details.
+  }
+}
+
+\gamerule{The BattleCon Golden Rules}{
+  \label{thebattlecongoldenrules}
+  \subrules{
+    \item Whenever a card directly contradicts any rules herein, the card takes precedence. The card only overrides the specific rule in that situation. The only exception is that a player can concede at any point in the game (see rule XXX).
+    \item When a rule or effect states or directs something to happen, and a different rule states that it can't, the ``can't'' effect takes precedence.
+    \item Any part of an instruction that is impossible to perform is ignored. (In many cases, an effect will state consequences for this; otherwise, nothing happens.)
+    \item All players must agree on a single method of indicating they are finished or they have passed after a given decision.
+    \item If all players are required to make decisions at the same time, either open or double-blind (see rule XXX for making decisions), all players must announce they have finished or passed. Then the actions happen simultaneously.
+    }
+}
+
+\gamerule{Players}{
+  \label{players}
+  \subrules{
+    \item A player is a person participating in the game.
+    \subsubrules{\item The Active Player is the player who has higher priority after Reveal effects are resolved (see rule XXX), and a Reactive Player is any player with lower priority.}
+    \item In a two-player game, a player's opponent is the other player.
+    \item In a multiplayer game, a player's teammates are the other players on their team, and the player's opponents are all of the players not on their team.
+    \item In a tournament, the tournament organizer is not a player. The tournament organizer is also the rules arbiter, unless an official Level 99 Games representative is present and can fill the role.
+    }
+}
+
+\gamerule{Starting a Duel}{
+  \label{startingaduel}
+  \subrules{
+    \item The following rules apply to individual duels. The rules that govern matches are located at rule XXX.
+    \item At the start of a duel, each player chooses the character they will play.
+    \subsubrules{\item In a tournament match, each player must choose and use only one character per duel of a match and cannot use the same character twice in a match. The character selection process is double-blind.} 
+    \item Each player takes all of their character's cards except the character card (5 styles, and 1 base) plus a set of generic bases (6 bases, and 1 Special Action) to form a starting hand.
+    \item Place the board between the players, so that each has access to their health trackers and the movement spaces. Each player places their own character on the second-from-the-left space on the board.
+    \item Each player places their character card in the character card zone, and places all tokens in the token pool zone or into play as specified by their unique abilities.
+    \item Each player chooses two bases and two styles to form two pairs that will be placed in the discard zones, Discard 1 and Discard 2 respectively.
+    \subsubrules{\item For new players, suggested cards for starting discard piles are marked with a 1 and a 2.}
+    \item Each player sets their life points to 20, and notes the initial beat of 1.
+    \item Both players select their first Attack Pair for beat 1.
+    }
+}
+
+\gamerule{Ending a Duel}{
+  \label{endingaduel}
+  \subrules{
+    \item A duel ends immediately when a player wins, or when the duel is a draw.
+    \item There are several ways to win the duel.
+    \subsubrules{
+      \item A player still in the duel wins the game if all of that player’s opponents have left the game. This happens immediately and overrides all effects that would prevent that player from winning the duel.
+      \item A player wins the duel if they have more health than their opponent at the end of beat 15.
+      \item In a multiplayer duel between teams, a team with at least one player still in the duel wins the duel if all other teams have left the game. Each player on the winning team wins the game, even if one or more of those players had previously lost that duel.
+    } 
+    \item There are several ways to lose a duel.
+    \subsubrules{
+      \item A player can concede the duel at any time. A player who concedes leaves the duel immediately. They lose the game.
+      \item If a player’s life total is 0 or less, they lose the duel.
+      \item An effect may state that a player lose the duel.
+      \item If a player would both win and lose the duel simultaneously, they lose the duel.
+      \item In a multiplayer game between teams, a team loses the duel if all players on that team have lost the duel.
+      \item In a multiplayer duel, an effect that states that a player wins the duel instead causes all of that player’s opponents to lose the duel.
+      \item In a tournament, a player may lose the duel as a result of a penalty given by a judge.
+    }
+    \item There are several ways for a duel to be a draw.
+    \subsubrules{
+      \item If all the remaining players in a game lose simultaneously, the duel is a draw.
+      \item An effect may state that the duel is a draw.
+      \item In a multiplayer duel between teams, if all remaining teams lose simultaneously, the duel is a draw.
+      \item In a tournament, all players may agree to an intentional draw.
+    }
+    \item If a player loses the duel, they leave the duel. If the duel is a draw for a player, they leave the duel. The multiplayer rules handle what happens when a player leaves the duel; see rule XXX.
+  }
+}
+
+
+\gamerule{Numbers and Symbols}{
+  \label{numbersandsymbols}
+  \subrules{
+    \item The only numbers BattleCon uses are integers.
+    \subsubrules{\item Characters can't deal fractional damage, move fractional spaces, and so on.}
+    \item If anything needs to use a number that can’t be determined, either as a result or in a calculation, it uses 0 instead.
+    \item Many cards use N/A in place of a number. This means the card is inapplicable in that given setting, and any modifiers applied are ignored. Generally, most effects will give reason to why an element is N/A.
+    \item Many cards use the letter X as a placeholder for a number that needs to be determined. Such cards will specify how to determine the value of X.
+    \item The colored hexagon in the upper left corner of the style cards have no effect on gameplay, and are there to help the player recognize the card.
+    \item The rectangle in the lower left corner of certain cards have no effect on gameplay, and are there as suggestions for initial discard option. See rule 103.5a.
+  }
+}
+
+\gamerule{Objects}{
+  \label{objects}
+  \subrules{
+    \item An object is a character marker, character card, a base card, a style card, or a token.
+    \item The words ``you'' and ``your'' on an object refer to the object’s player.
+    \item An object's elements are name, type, color, range, power, priority, Overdrive Finish, ability text, event text, and character name. Not all cards will have all elements. Different cards have different ``sets'' of the elements. Any other information about an object isn’t an element.
+    \item Some effects refer to the name of their character. In these cases, the effect specifically applies only to the object's player. Any objects which share a name are considered unique for such effects.
+  }
+}
+
+\gamerule{Cards}{
+  \label{cards}
+  \subrules{
+    \item A card refers to all possibilities of an object except the token.
+    \item When a rule or text on a card refers to a ``card,'' it means only a BattleCon card. Most BattleCon duels use only traditional BattleCon cards. Certain formats also use nontraditional BattleCon cards, or cards that may have different backs. Tokens aren’t considered cards—even a card that represents a token isn’t considered a card for rules purposes.
+    \item For more information about cards, see section 2, ``Parts of a Card.''
+  }
+}
+
+\gamerule{Token}{
+  \label{token}
+  \subrules{
+    \item Tokens are items that represent certain elements of a character's effects.
+    \item When a character begins a duel with tokens or gains tokens during a duel, the tokens are placed in the player's token pool. From there, they can be spent or anted as rules allow.
+    \item When anted or spent, tokens are normally placed in their player’s token discard pool.
+    \item Certain effects modify a character's stats, and to help remember, the First Edition contains chips representing common modifications. These do not count as tokens for any purpose.
+  }
+}
+
+\gamerule{Unique abilities}{
+  \label{uniqueabilites}
+  \subrules{
+    \item A unique ability is an element a character card has that lets it affect the duel. A character card's unique abilities are defined by its rules text.
+    \item Unique abilities affect the player and the character the character card represents. They can also affect the opponent(s) and the opponent's character(s).
+    \item A character cannot have multiple unique abilities. Paragraph breaks do not change a character's unique abilities.
+  }
+}
+
+\gamerule{Effects}{
+  \label{effects}
+  \subrules{
+    \item An effect is an element an object has that affects the duel. An object's effects are defined by its rule text.
+    \item  Effects affect the object they're on. They can also affect other objects and/or players.
+    \item  Effects can be beneficial or detrimental.
+    \item  An object can have multiple effects. If the object is a card, each paragraph break represents a different effect.
+    \item  There are two different categories for effects.
+    \subsubrules{
+      \item Passive effects are written as declarative statements. They are flatly true. They are written, ``[Effect].''\\
+      \emph{For example, Demitras's style Bloodletting has the passive effects, ``This attack ignores Soak.''}
+      \item Triggered effects are written in two parts, the trigger and the effect. They are written two different ways. The first is written, ``\emph{[Trigger]}: [Effect],'' and the trigger is almost always an element of timing. The second is written, ``[If]/[When] [event], [effect].''\\
+      \emph{For example, Cherri's base Stare has two effects. The second effect is the triggered effect, ``\textbf{On hit:} You gain an Insight Token if you do not have one.''}\\
+      \emph{For example, Heketch's style Merciless has the triggered effect, ``If an opponent moves past you, that opponent loses 2 life and may not move again during this beat.''}
+      \item If multiple triggers would be triggered at the same time, following AP-NAP, each player may trigger them in any order.
+    }
+    \item If a triggered effect and a passive effect would conflict with one another, the passive effect happens and the triggered effect is ignored.
+  }
+}
+
+\gamerule{Movement}{
+  \label{movement}
+  \subrules{
+    \item Many effects will cause a character to move. The only way to move on the board is by these effects or by unique abilities of characters.
+    \item Movement effects are mandatory, and cannot be ignored unless impossible to follow-through.
+    \item If a movement effect would move a character into an occupied space, the occupied space is not counted and the character skips it when moving.\\
+      \emph{For example, the base Drive has the movement effect, ``\textbf{Before Activating}: Advance 1 or 2 spaces.'' If two characters are next to each other and one uses Drive, they would move to the other side of their opponent and then, if they choose, they could move back to their starting space.}
+    \item All movement effects are triggered effects, written in the form of, ``\textbf{[Trigger]}: [Movement Type] [Amount]''.
+    \item There are six different types of movement:
+    \subsubrules{
+      \item Advance movement brings a character closer to an opponent. If a character would enter an opponent's space, the character must
+      \item Retreat
+      \item Pull
+      \item Push
+      \item Move
+      \item Move directly
+    }
+  }
+}
+
+\gamerule{Life}{
+  \label{life}
+  \subrules{
+    \item Each player begins the game with 20 life.
+    \subsubrules{
+      \item In an Ex duel, the Ex player has 30 life.
+      \item In an Almighty duel, the Almighty player has 40 life.
+    }
+    \item Damage dealt to a player reduces the player's life by that much.
+    \item Life lost by a player reduces the player's life by that much, to a minimum of 1.
+    \item Life gained by a player increases a player's life by that much, to a maximum of their starting life.
+    \item If a player has 0 or less life, they lose the game.
+    \item If a cost or effect allows a player to pay an amount of life greater than 0, the player may pay it only if their life total is greater than or equal to the payment. If a player pays life, the player loses life by that much. (In other words, the player's life is reduced by that much, to a minimum of 1.) A player can always pay 0.
+    \item If a cost or effect requires a player to pay an amount of life, the payment is considered life lost, and thus cannot reduce the paying player's life below 1.
+    \item If an effect sets a player's life to a specific amount, the player increases or reduces their life to match the new total.
+  }
+}
+
+\gamerule{Damage}{
+  \label{damage}
+  \subrules{
+    \item Characters deal damage only during the Deal Damage step of Excecuting Attacks. See rule XXX.
+    \item Damage dealt to a character deals that much damage to its player. See rule 111.1.
+    \item Damge dealt is handled in three steps:
+    \subsubrules{
+      \item First, damage to be dealt is calculated, modified by anted tokens, passive and triggered effects, soak, and other modifiers. See rule XXX.
+      \item Next, the damage is dealt.
+      \item Last, On Damage effects trigger.
+      }
+    \item If a source would deal 0 damage, it does not deal damage at all. This means On Damage effects, and effects that trigger on damage being dealt won't trigger.
+  }
+}
+
+\gamerule{Simultaneous Decisions}{
+  \label{simultaneousdecisions}
+  \subrules{
+    \item There are two ways to make simultaneous decisions.
+    \item The first is open.
+    \subsubrules{
+      \item In an open decision, players must reveal to all opponents all objects selected, chosen or discarded, and all amounts chosen.
+      \item There is no need for a simultaneous reveal, as all participants will see all choices made as they happen. Once all players have passed, the decision ends.
+      \item Decisions made during an open decision cannot be taken back.
+      \item Any information hidden or undisclosed is assumed to not be a part of any open decision, and therefore cannot introduced without being disclosed or revealed.
+      \emph{Example: The Ante step is an open decision.}
+    }
+    \item The second is double-blind.
+    \subsubrules{
+      \item In a double-blind decision, players must keep hidden all objects selected, chosen or discarded, and all amounts chosen.
+      \item Once all players have passed, all participants must simultaneously reveal the results of their choices.
+      \item Because all information is hidden, decisions can be taken back as much as needed until all players have passed successively. Once revealed, decisions made cannot be taken back.
+      \item All information related to the decision is assumed to be hidden and undisclosed.
+    }
+  }
+}
+
+\newpage
+\section{Parts of a Card}
+\label{sec:second}
+\setcounter{rulecounter}{0}
+
+\gamerule{General}{
+  \label{partsofacard}
+  \subrules{
+    \item The parts of a card are name, colored hexagon, range, range modifier, power, power modifier, priority, priority modifier, Overdrive Finish box, text box, illustration, illustration credit, character name, legal text, and back. Not all cards will have all parts. Different cards have different ``sets'' of the parts.
+    \item Tokens have some parts of a card, but aren't cards themselves. In this chapter, they will be referenced separately for each rule that applies to them.
+  }
+}
+
+\gamerule{Name}{
+  \label{name}
+  \subrules{
+    \item The name of a card is printed on the top of the card, in a different position for each kind of card.
+    \subsubrules{
+      \item Base cards have their name printed in the upper-left corner of the card.
+      \item Style cards have their name printed in the upper-right corner of the card.
+      \item Character cards have their name printed centered along the top of the card.
+      \item Tokens have their name printed centered along the top of the token.
+    }
+    \item If an effect 
+  }
+}
+
+\newpage
+\section{Card Types}
+\setcounter{rulecounter}{0}
+
+\gamerule{General}{
+  \subrules{
+    \item The card types are arena, base, character, style, special action, striker.
+  }
+}
+
+\gamerule{Base Cards}{
+  \label{basecards}
+  \subrules{
+    \item Base cards
+  }
+}
+
+\newpage
+\section{Zones}
+\setcounter{rulecounter}{0}
+
+\gamerule{General}{
+  \label{cardtypes}
+  \subrules{
+    \item A zone is a place where objects exist during a duel. The zones are hand, battlefield, discard, token pool, token discard pool, residence, board, team pool, and arena area.
+    \item Each player has their own hand, battlefield, discard, token pool token discard pool residence and team pool. The board and arena area are shared by all players.
+    \item Anywhere else is considered outside of the game, which is not a zone and cannot be interacted with mechanically.
+  }
+}
+
+\gamerule{Hand}{
+  \label{hand}
+  \subrules{
+    \item Each player has a set of cards they have not played yet, which constitutes their hand. The hand is hidden information, and known only to each individual owner.
+    \item Players select attack pairs from their hand. Attack pairs cannot normally be formed by cards from any other location.
+    \item When the discard rotates, cards from the last discard are put back into the hand.
+    \item Tokens cannot ever be in the hand.
+  }
+}
+
+\gamerule{Battlefield}{
+  \label{battlefield}
+  \subrules{
+    \item Attack pairs are placed on the battlefield during the Select Attack Pairs step.
+    \item Face-up or face-down, cards on the battlefield must be visible to all players.
+    \item If a token is placed on the battlefiend or any object on the battlefiend, it must be visible to all players.
+  }
+}
+
+\gamerule{Discard}{
+  \label{discard}
+  \subrules{
+    \item The discard is one zone, but two distinct piles. Normally a player will have two discard piles, discard 1 and discard 2. 
+    \subsubrules{\item Effects can modify the number of discard piles a player has.}
+    \item Cards enter, exit, and move between each discard pile only during the Recycle step.
+    \item Cards that would move to a nonexistent discard pile instead is moved to that players hand. 
+    \item An Overdrive Finish cannot ever enter the discard zone. (See rule XX, "Overdrive Finish".)
+  }
+}
+
+\gamerule{Token pool}{
+  \label{tokenpool}
+  \subrules{
+    \item Each 
+  }
+}
+
+\gamerule{Token discard pool}{
+  \label{tokendiscardpool}
+  \subrules{
+    \item
+  }
+}
+
+\gamerule{Residence}{
+  \label{residence}
+  \subrules{
+    \item 
+  }
+}
+
+\gamerule{Board}{
+  \label{board}
+  \subrules{
+    \item 
+  }
+}
+
+\gamerule{Team pool}{
+  \label{teampool}
+  \subrules{
+    \item 
+  }
+}
+
+\newpage
+\section{Round Structure}
+\setcounter{rulecounter}{0}
+
+\gamerule{General}{
+  \subrules{
+    \item A round consists of steps, in this order: Select Attack Pairs, Ante Tokens, Reveal Attack Pairs, Execute Attacks, and Recycle. Each step happens simultaneously for all players, and each step takes place even if nothing happens during that step. 
+  }
+}
+
+\gamerule{Select Attack Pairs Step}{
+  \label{selectattackpairsstep}
+  \subrules{
+    \item This decision is double-blind.
+    \item Each player selects an attack pair from their hand, and places those cards face-down on the battlefield. The face-down cards must be visible to all players.
+    \item A legal attack pair has two cards, one base and one style. Variants allow for other cards to be used in place of either the base or the style (see rule XXX, “Variants”).
+  }
+}
+
+\gamerule{Ante Tokens Step}{
+  \label{antetokensstep}
+  \subrules{
+    \item This decision is open.
+    \item Players may ante tokens from their token pool during this step.
+    \item In case of a stalemate (where both players wait for the other to ante first), this decision follows AP-NAP.
+    \subsubrules{\item The active player either announces any tokens they ante or passes and then the non-active player announces any tokens they ante or passes. If either player antes a token, the other player gains the chance to ante or pass.}
+    \item Once a player has anted a token, they cannot reverse their decision or otherwise take back the token for the remainder of this step.
+      \subsubrules{\item Anted tokens  generate whatever effects their rules text contain (see rule XXX, ``Tokens'').}
+    \item If both players passed, the Ante Tokens Step ends and the Reveal Attack Pairs Step begins. 
+  }
+}
+
+\gamerule{Reveal Attack Pairs Step}{
+  \label{revealattackpairsstep}
+  \subrules{
+    \item All participating players turn their selected attack pair face-up.
+    \item Following AP-NAP, Reveal effects are triggered.
+    \subsubrules{\item If an attack pair has more than one Reveal effect, that player may trigger them in any order.}
+    \item For each attack pair, calculate priority by adding to the attack pair's base all modifications.
+    \subsubrules{\item Modifications include but are not limited to: The attack pair's style, any effects that target the attack pair, global effects, character abilities, arena effects.}
+    \item Determine the attack pair with the highest priority by comparing each attack pair's priority.
+    \item If any attack pair's priority is equal to another attack pair's priority, initiate a Clash between those two players.
+    \item When a Clash occurs, each player:
+    \subsubrules{
+      \item Sets aside the base from their attack pair;
+      \item Selects a new base by placing a base from their hand face-down onto the battlefield;
+      \item And then passes.
+      \item If both players have passed, both players turn their selected bases face-up.
+      \item Reveal effects on the new base do not trigger.
+      \item Recalculate priority for each attack pair, including all modifications except those from either base.
+      \item If the priority of both attack pairs is equal, repeat this process. Otherwise, the clash has been resolved.
+    \item If no clash occurs or the clash has been resolved, following AP-NAP, Start of Beat effects are triggered.
+    }
+      \subsubrules{\item If an attack pair has more than one Start of Beat effect, that player may trigger them in any order.}
+    \item 
+  }
+}
+
+\gamerule{Execute Attacks Step}{
+  \label{executeattacksstep}
+  \subrules{
+    \item
+    \item
+  }
+}
+
+\gamerule{Recycle Step}{
+  \label{recyclestep}
+  \subrules{
+    \item
+    \item
+  }
+}
+\end{document}

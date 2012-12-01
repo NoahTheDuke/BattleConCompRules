@@ -1,0 +1,218 @@
+BattleConnection
+Introduction
+This document is written for people who've moved beyond casual BattleCon. It may be unofficial, but it's designed to be as close as possible to the creator's intent.  Contained herein is the complete rules-set for BattleCon divested of fluff, theme, and setting. It is intended to be the ultimate authority on the game, detailing the exact nature of the underlying systems.
+(Taken directly from the Magic: The Gathering Comp. Rules):
+This document includes a series of numbered rules followed by a glossary. Many of the numbered rules are divided into subrules, and each separate rule and subrule of the game has its own number. (Note that subrules skip the letters “l” and “o” due to potential confusion with the numbers “1” and “0”; subrule 704.5k is followed by 704.5m, then 704.5n, then 704.5p, for example.)
+Obviously, regardless of how detailed any rules set is, situations will arise where the rules do not provide a complete answer. In such a case, Brad et al. at Level 99 Games can and should be contacted, preferably through the BattleCon Facebook page or BoardGameGeek entry.
+My name is Noah, and I can be reached at nbtheduke@gmail.com
+
+
+Table of Contents
+
+1. Game Concepts
+
+100. General
+100.0. These BattleCon rules apply to any BattleCon game with two or more players, including two-player games and multiplayer variants.
+100.1. To play, each player needs:
+100.1a. Their own set of six (6) base cards;
+100.1b. A set of seven (7) style cards, all from the same character;
+100.1c. Distinct items for tracking Character tokens;
+100.1d. Some means of tracking both life totals and the turn number.
+100.2. The players also need a game board to track character position, and distinct items which represent their character on the board. For multiplayer variants, a game board with two movement tracks is necessary.
+100.2a. The Complete First Edition boxed set contains all of the items necessary to play. Nothing contained within is illegal for use in any official setting.
+100.3. Casual variants may require other items, such as specially marked cards or dice.
+100.4. A match of BattleCon consists of two to three duels (for duels, see rule XXX). The winner of the match is the player who wins two of the duels.
+100.5. Most BattleCon tournaments will have additional rules, which are contained later on. See Chapter XXX for details.
+101. The BattleCon Golden Rules
+101.0. Whenever a card directly contradicts any rules herein, the card takes precedence. The card only overrides the specific rule in that situation. The only exception is that a player can concede at any point in the game (see rule XXX).
+101.1. When a rule or effect states or directs something to happen, and a different rule states that it can't, the "can't" effect takes precedence.
+101.2. Any part of an instruction that is impossible to perform is ignored. (In many cases, an effect will state consequences for this; otherwise, nothing happens.)
+101.3. All players must agree on a single method of indicating they are finished or they have passed after a given decision.
+101.4. If all players are required to make decisions at the same time, either open or double-blind (see rule XXX for making decisions), all players must announce they have finished or passed. Then the actions happen simultaneously.
+102. Players
+102.0. A player is a person participating in the game.
+102.0a. The Active Player is the player who has higher priority after Reveal effects are resolved (see rule XXX), and a Reactive Player is any player with lower priority.
+102.1. In a two-player game, a player's opponent is the other player.
+102.2. In a multiplayer game, a player's teammates are the other players on their team, and the player's opponents are all of the players not on their team.
+102.3. In a tournament, the tournament organizer is not a player. The tournament organizer is also the rules arbiter, unless an official Level 99 Games representative is present and can fill the role.
+103. Starting a Duel
+103.0. The following rules apply to individual duels. The rules that govern matches are located at rule XXX.
+103.1. At the start of a duel, each player chooses the character they will play.
+103.1a. In a tournament match, each player must choose and use only one character per duel of a match and cannot use the same character twice in a match. The character selection process is double-blind.
+103.2. Each player takes all of their character's cards except the character card (5 styles, and 1 base) plus a set of generic bases (6 bases, and 1 Special Action) to form a starting hand.
+103.3. Place the board between the players, so that each has access to their health trackers and the movement spaces. Each player places their own character on the second-from-the-left space on the board.
+103.4. Each player places their character card in the character card zone, and places all tokens in the token pool zone or into play as specified by their unique abilities.
+103.5. Each player chooses two bases and two styles to form two pairs that will be placed in the discard zones, Discard 1 and Discard 2 respectively.
+103.5a. For new players, suggested cards for starting discard piles are marked with a 1 and a 2.
+103.6. Each player sets their life points to 20, and notes the initial beat of 1.
+103.7. Both players select their first Attack Pair for beat 1.
+104. Ending a Duel
+104.0. A duel ends immediately when a player wins, or when the duel is a draw.
+104.1. There are several ways to win the duel.
+104.1a. A player still in the duel wins the game if all of that player’s opponents have left the game. This happens immediately and overrides all effects that would prevent that player from winning the duel.
+104.1b. A player wins the duel if they have more health than their opponent at the end of beat 15.
+104.1c. In a multiplayer duel between teams, a team with at least one player still in the duel wins the duel if all other teams have left the game. Each player on the winning team wins the game, even if one or more of those players had previously lost that duel.
+104.2. There are several ways to lose a duel.
+104.2a. A player can concede the duel at any time. A player who concedes leaves the duel immediately. They lose the game.
+104.2b. If a player’s life total is 0 or less, they lose the duel.
+104.2c. An effect may state that a player lose the duel.
+104.2d. If a player would both win and lose the duel simultaneously, they lose the duel.
+104.2e. In a multiplayer game between teams, a team loses the duel if all players on that team have lost the duel.
+104.2f. In a multiplayer duel, an effect that states that a player wins the duel instead causes all of that player’s opponents to lose the duel.
+104.2g. In a tournament, a player may lose the duel as a result of a penalty given by a judge.
+104.3. There are several ways for a duel to be a draw.
+104.3a. If all the remaining players in a game lose simultaneously, the duel is a draw.
+104.3b. An effect may state that the duel is a draw.
+104.3c. In a multiplayer duel between teams, if all remaining teams lose simultaneously, the duel is a draw.
+104.3d. In a tournament, all players may agree to an intentional draw.
+104.4. If a player loses the duel, they leave the duel. If the duel is a draw for a player, they leave the duel. The multiplayer rules handle what happens when a player leaves the duel; see rule XXX.
+105. Numbers and Symbols
+105.0. The only numbers BattleCon uses are integers.
+105.0a. Characters can't deal fractional damage, move fractional spaces, and so on.
+105.1. If anything needs to use a number that can’t be determined, either as a result or in a calculation, it uses 0 instead.
+105.2. Many cards use N/A in place of a number. This means the card is inapplicable in that given setting, and any modifiers applied are ignored. Generally, most effects will give reason to why an element is N/A.
+105.3. Many cards use the letter X as a placeholder for a number that needs to be determined. Such cards will specify how to determine the value of X.
+105.4. The colored hexagon in the upper left corner of the style cards have no effect on gameplay, and are there to help the player recognize the card.
+105.5. The rectangle in the lower left corner of certain cards have no effect on gameplay, and are there as suggestions for initial discard option. See rule 103.5a.
+106. Objects
+106.0. An object is a character marker, character card, a base card, a style card, or a token.
+106.1. The words "you" and "your" on an object refer to the object’s player.
+106.2. An object's elements are name, type, color, range, power, priority, Overdrive Finish, ability text, event text, and character name. Not all cards will have all elements. Different cards have different "sets" of the elements. Any other information about an object isn’t an element.
+106.3. Some effects refer to the name of their character. In these cases, the effect specifically applies only to the object's player. Any objects which share a name are considered unique for such effects.
+107. Cards
+107.0. A card refers to all possibilities of an object except the token.
+107.1. When a rule or text on a card refers to a "card," it means only a BattleCon card. Most BattleCon duels use only traditional BattleCon cards. Certain formats also use nontraditional BattleCon cards, or cards that may have different backs. Tokens aren’t considered cards—even a card that represents a token isn’t considered a card for rules purposes.
+107.2. For more information about cards, see section 2, "Parts of a Card."
+108. Token
+108.0. Tokens are items that represent certain elements of a character's effects.
+108.1. When a character begins a duel with tokens or gains tokens during a duel, the tokens are placed in the player's token pool. From there, they can be spent or anted as rules allow.
+108.2. When anted or spent, tokens are normally placed in their player’s token discard pool.
+108.x. Certain effects modify a character's stats, and to help remember, the First Edition contains chips representing common modifications. These do not count as tokens for any purpose.
+109. Unique abilities
+109.0. A unique ability is an element a character card has that lets it affect the duel. A character card's unique abilities are defined by its rules text.
+109.1. Unique abilities affect the player and the character the character card represents. They can also affect the opponent(s) and the opponent's character(s).
+109.3. A character cannot have multiple unique abilities. Paragraph breaks do not change a character's unique abilities.
+110. Effects
+110.0 An effect is an element an object has that affects the duel. An object's effects are defined by its rule text.
+110.1. Effects affect the object they're on. They can also affect other objects and/or players.
+110.2. Effects can be beneficial or detrimental.
+110.3. An object can have multiple effects. If the object is a card, each paragraph break represents a different effect.
+110.4. There are two different categories for effects.
+110.4a. Passive effects are written as declarative statements. They are flatly true. They are written, "[Effect]."
+For example, Demitras's style Bloodletting has the passive effects, "This attack ignores Soak."
+110.4b. Triggered effects are written in two parts, the trigger and the effect. They are written two different ways. The first is written, "[Trigger]: [Effect]," and the trigger is almost always an element of timing. The second is written, "[If]/[When] [event], [effect]."
+For example, Cherri's base Stare has two effects. The second effect is the triggered effect, "On hit: You gain an Insight Token if you do not have one."
+For example, Heketch's style Merciless has the triggered effect, "If an opponent moves past you, that opponent loses 2 life and may not move again during this beat.
+110.5. If a triggered effect and a passive effect would conflict with one another, the passive effect happens and the triggered effect is ignored.
+111. Movement
+111.0. Many effects will cause a character to move. The only way to move on the board is by these effects or by unique abilities of characters.
+111.1. Movement effects are mandatory, and cannot be ignored unless impossible to follow-through.
+
+111.2. All movement effects are triggered effects, written in the form of, "[Trigger]: [Movement Type] [Amount]".
+111.3. There are six different types of movement:
+111.3a. Advance movement brings a character closer to an opponent. If a character would enter an opponent's space, the character must
+112. Life
+112.0. Each player begins the game with 20 life.
+112.0a. In an Ex duel, the Ex player has 30 life.
+112.0b. In an Almighty duel, the Almighty player has 40 life.
+112.1. Damage dealt to a player reduces the player's life by that much.
+112.2. Life lost by a player reduces the player's life by that much, to a minimum of 1.
+112.3. Life gained by a player increases a player's life by that much, to a maximum of their starting life.
+112.4. If a player has 0 or less life, they lose the game.
+112.5. If a cost or effect allows a player to pay an amount of life greater than 0, the player may pay it only if their life total is greater than or equal to the payment. If a player pays life, the player loses life by that much. (In other words, the player's life is reduced by that much, to a minimum of 1.) A player can always pay 0.
+112.6. If a cost or effect requires a player to pay an amount of life, the payment is considered life lost, and thus cannot reduce the paying player's life below 1.
+112.7. If an effect sets a player's life to a specific amount, the player increases or reduces their life to match the new total.
+113. Damage
+113.0. Characters deal damage only during the Deal Damage step of Excecuting Attacks. See rule XXX.
+113.1. Damage dealt to a character deals that much damage to its player. See rule 111.1.
+113.2. Damge dealt is handled in three steps:
+113.2a. First, damage to be dealt is calculated, modified by anted tokens, passive and triggered effects, soak, and other modifiers. See rule XXX.
+113.2b. Next, the damage is dealt.
+113.2c. Last, On Damage effects trigger.
+113.3. If a source would deal 0 damage, it does not deal damage at all. This means On Damage effects, and effects that trigger on damage being dealt won't trigger.
+114. Simultaneous Decisions
+114.0. There are two ways to make simultaneous decisions.
+114.1. The first is open.
+114.1a. In an open decision, players must reveal to all opponents all objects selected, chosen or discarded, and all amounts chosen.
+114.1b. There is no need for a simultaneous reveal, as all participants will see all choices made as they happen. Once all players have passed, the decision ends.
+114.1c. Decisions made during an open decision cannot be taken back.
+114.1d. Any information hidden or undisclosed is assumed to not be a part of any open decision, and therefore cannot introduced without being disclosed or revealed.
+Example: The Ante step is an open decision.
+114.2. The second is double-blind.
+114.2a. In a double-blind decision, players must keep hidden all objects selected, chosen or discarded, and all amounts chosen.
+114.2b. Once all players have passed, all participants must simultaneously reveal the results of their choices.
+114.2c. Because all information is hidden, decisions can be taken back as much as needed until all players have passed successively. Once revealed, decisions made cannot be taken back.
+114.2d. All information related to the decision is assumed to be hidden and undisclosed.
+
+2. Parts of a Card
+
+200. General
+200.0. The parts of a card are name, colored hexagon, range, range modifier, power, power modifier, priority, priority modifier, Overdrive Finish box, text box, illustration, illustration credit, character name, legal text, and back. Not all cards will have all parts. Different cards have different "sets" of the parts.
+200.1. Tokens have some parts of a card, but aren't cards themselves. In this section, they will be referenced separately for each rule that applies to them.
+201. Name
+201.0. The name of a card is printed on the top of the card, in a different position for each kind of card.
+201.0a. Base cards have their name printed in the upper-left corner of the card.
+201.0b. Style cards have their name printed in the upper-right corner of the card.
+201.0c. Character cards have their name printed centered along the top of the card.
+201.0d. Tokens have their name printed centered along the top of the token.
+201.1. If an effect
+
+3. Card Types
+
+300. General
+300.0. The card types are arena, base, character, style, special action, striker.
+301. Base Cards
+301.0. Base cards
+4. Zones
+
+400. General
+400.0. A zone is a place where objects exist during a duel. The zones are hand, battlefield, discard, token pool, token discard pool, residence, board, team pool, and arena area.
+400.x. Each player has their own hand, battlefield, discard, token pool token discard pool residence and team pool. The board and arena area are shared by all players.
+400.x. Anywhere else is considered outside of the game, which is not a zone and cannot be interacted with mechanically.
+400. Hand
+400.0. Each player has a set of cards they have not played yet, which constitutes their hand. The hand is hidden information, and known only to each individual owner.
+40x.x. Players select attack pairs from their hand. Attack pairs cannot normally be formed by cards from any other location.
+40x.x. When the discard rotates, cards from the last discard are put back into the hand.
+40x.x. Tokens cannot ever be in the hand.
+400. Battlefield
+400.0. Attack pairs are placed on the battlefield during the Select Attack Pairs step.
+40x.x. Face-up or face-down, cards on the battlefield must be visible to all players.
+400. Discard
+400.0. The discard is one zone, but two distinct piles. Normally a player will have two discard piles, discard 1 and discard 2.
+40x.xx. Elements can modify the number of discard piles a player has.
+40x.x. Cards enter and exit the discard and move between each discard pile only during the Recycle step.
+40x.x. Cards that would move to a nonexistent discard pile instead is moved to that players hand.
+400. Token pool
+400.0. Each
+400. Token discard pool
+400.0.
+400. Residence
+400.0.
+400. Board
+400.0.
+400. Team pool
+400.0.
+5. Round Structure
+
+500. General
+500.0. A round consists of steps, in this order: Select Attack Pairs, Ante Tokens, Reveal Attack Pairs, Execute Attacks, and Recycle. Each step happens simultaneously for all players, and each step takes place even if nothing happens during that step. The steps Reveal Attack Pairs and Execute Attacks are broken down into further steps, which proceed in order.
+500.1.
+501. Select Attack Pairs Step
+501.0. This decision is double-blind.
+501.0. Each player selects an attack pair from their hand, and places those cards face-down on the battlefield. The face-down cards must be visible to all players.
+501.1. A legal attack pair has two cards, one base and one style. Variants allow for other cards to be used in place of either the base or the style (see rule XXX, “Variants”).
+502. Ante Tokens Step
+502.0. This decision is open.
+502.x. Players may ante tokens from their token pool during this step.
+502.1. Once a player has anted a token, they cannot reverse their decision or otherwise take back the token for the remainder of this step.
+502.x. Anted tokens  generate whatever effects their rules text contain.
+503. Reveal Attack Pairs Step
+503.0.
+503.1.
+504. Execute Attacks Step
+504.0.
+504.1.
+505. Recycle Step
+505.0.
+505.1.
+
