@@ -81,7 +81,7 @@ My name is Noah, and I can be reached at nbtheduke@gmail.com
   \label{players}
   \subrules{
     \item A player is a person participating in the game.
-    \subsubrules{\item The Active Player is the player who has higher priority after Reveal effects are resolved (see rule XXX), and a Reactive Player is any player with lower priority.}
+    \subsubrules{\item The Active Player is the player who has higher priority after Reveal effects are resolved, and a Reactive Player is any player with lower priority (see rule XXX).}
     \item In a two-player game, a player's opponent is the other player.
     \item In a multiplayer game, a player's teammates are the other players on their team, and the player's opponents are all of the players not on their team.
     \item In a tournament, the tournament organizer is not a player. The tournament organizer is also the rules arbiter, unless an official Level 99 Games representative is present and can fill the role.
@@ -201,7 +201,7 @@ My name is Noah, and I can be reached at nbtheduke@gmail.com
       \item Triggered effects are written in two parts, the trigger and the effect. They are written two different ways. The first is written, ``\emph{[Trigger]}: [Effect],'' and the trigger is almost always an element of timing. The second is written, ``[If]/[When] [event], [effect].''\\
       \emph{For example, Cherri's base Stare has two effects. The second effect is the triggered effect, ``\textbf{On hit:} You gain an Insight Token if you do not have one.''}\\
       \emph{For example, Heketch's style Merciless has the triggered effect, ``If an opponent moves past you, that opponent loses 2 life and may not move again during this beat.''}
-      \item If multiple triggers would be triggered at the same time, following AP-NAP, each player may trigger them in any order.
+      \item If multiple triggers would be triggered at the same time, following AP-RP, each player may trigger them in any order.
     }
     \item If a triggered effect and a passive effect would conflict with one another, the passive effect happens and the triggered effect is ignored.
   }
@@ -428,7 +428,7 @@ My name is Noah, and I can be reached at nbtheduke@gmail.com
   \subrules{
     \item This decision is open.
     \item Players may ante tokens from their token pool during this step.
-    \item In case of a stalemate (where both players wait for the other to ante first), this decision follows AP-NAP.
+    \item In case of a stalemate (where both players wait for the other to ante first), this decision follows AP-RP.
     \subsubrules{\item The active player either announces any tokens they ante or passes and then the non-active player announces any tokens they ante or passes. If either player antes a token, the other player gains the chance to ante or pass.}
     \item Once a player has anted a token, they cannot reverse their decision or otherwise take back the token for the remainder of this step.
       \subsubrules{\item Anted tokens  generate whatever effects their rules text contain (see rule XXX, ``Tokens'').}
@@ -440,11 +440,12 @@ My name is Noah, and I can be reached at nbtheduke@gmail.com
   \label{revealattackpairsstep}
   \subrules{
     \item All participating players turn their selected attack pair face-up.
-    \item Following AP-NAP, Reveal effects are triggered.
+    \item Following AP-RP, \textbf{Reveal} effects are triggered.
+    df
     \subsubrules{\item If an attack pair has more than one Reveal effect, that player may trigger them in any order.}
     \item For each attack pair, calculate priority by adding to the attack pair's base all modifications.
     \subsubrules{\item Modifications include but are not limited to: The attack pair's style, any effects that target the attack pair, global effects, character abilities, arena effects.}
-    \item Determine the attack pair with the highest priority by comparing each attack pair's priority.
+    \item Determine the attack pair with the highest priority by comparing each attack pair's priority. That attack pair's player becomes Active Player.
     \item If any attack pair's priority is equal to another attack pair's priority, initiate a Clash between those two players.
     \item When a Clash occurs, each player:
     \subsubrules{
@@ -454,19 +455,35 @@ My name is Noah, and I can be reached at nbtheduke@gmail.com
       \item If both players have passed, both players turn their selected bases face-up.
       \item Reveal effects on the new base do not trigger.
       \item Recalculate priority for each attack pair, including all modifications except those from either base.
-      \item If the priority of both attack pairs is equal, repeat this process. Otherwise, the clash has been resolved.
-    \item If no clash occurs or the clash has been resolved, following AP-NAP, Start of Beat effects are triggered.
+      \item If the priority of both attack pairs is equal, repeat this process.
+      \item If the priorities are equal and one player has set aside all of their bases, both players return all bases to their hand and the Recycle Step is entered.
+      \item If the priorities aren't equal and neither player has run out of bases, the clash has been resolved.
     }
+    \item If no clash occurs or the clash has been resolved, following AP-RP, Start of Beat effects are triggered.
       \subsubrules{\item If an attack pair has more than one Start of Beat effect, that player may trigger them in any order.}
+  }
+}
+
+\gamerule{Execute Attacks Step, Active Player}{
+  \label{activeattacksstep}
+  \subrules{
+    \item This step is only performed by the Active Player.
+    \item \textbf{Before Activating} effects are triggered.
+    \item Determine if the opponent is in range:
+    \subsubrules{
+      \item Calculate range by adding all modifications.
+      \item With the 
+    }
+    \item If the opponent is in range, \textbf{On Hit} effects are triggered.
     \item 
   }
 }
 
-\gamerule{Execute Attacks Step}{
-  \label{executeattacksstep}
+\gamerule{Execute Attacks Step, Reactive Player}{
+  \label{reactiveattacksstep}
   \subrules{
-    \item
-    \item
+    \item This step is only performed by the Reactive Player.
+    \item 
   }
 }
 
