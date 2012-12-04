@@ -211,19 +211,28 @@ My name is Noah, and I can be reached at nbtheduke@gmail.com
   \label{movement}
   \subrules{
     \item Many effects will cause a character to move. The only way to move on the board is by these effects or by unique abilities of characters.
-    \item Movement effects are mandatory, and cannot be ignored unless impossible to follow-through.
-    \item If a movement effect would move a character into an occupied space, the occupied space is not counted and the character skips it when moving.\\
-      \emph{For example, the base Drive has the movement effect, ``\textbf{Before Activating}: Advance 1 or 2 spaces.'' If two characters are next to each other and one uses Drive, they would move to the other side of their opponent and then, if they choose, they could move back to their starting space.}
-    \item All movement effects are triggered effects, written in the form of, ``\textbf{[Trigger]}: [Movement Type] [Amount]''.
     \item There are six different types of movement:
     \subsubrules{
-      \item Advance movement brings a character closer to an opponent. If a character would enter an opponent's space, the character must
-      \item Retreat
-      \item Pull
-      \item Push
-      \item Move
-      \item Move directly
+      \item \textbf{Advance} moves a character closer to the opponent.
+      \item \textbf{Retreat} moves a character away from the opponent.
+      \item \textbf{Pull} moves an opponent closer to a character.
+      \item \textbf{Push} moves an opponent away from a character.
+      \item \textbf{Move} moves a character in either direction: closer to or further away from an opponent.
+      \item \textbf{Move directly} moves a character to any space on the board. 
     }
+    \item Movement effects are mandatory, and cannot be ignored unless impossible to follow-through.
+    \item If a character cannot complete movement because of a wall or an opponent next to a wall, the rest of the required movement is lost.
+    \item If a movement effect would move a character into an occupied space, the occupied space is not counted and the character skips it when moving. The skipped space does not count in the number of spaces moved.\\
+      \emph{For example, the base Drive has the movement effect, ``\textbf{Before Activating}: Advance 1 or 2 spaces.'' If two characters are next to each other and one uses Drive, they would move to the other side of their opponent and then, if they choose, they could move back to their starting space.}
+    \item For all movement except \textbf{Move directly}, a character must pass through each space between the initial and final spaces.
+    \item If an effect includes movement ``up to'' a specific amount, the player may choose any number from 0 to the amount specified.\\
+      \emph{For example, ``Advance up to 2 spaces'' means the player may choose to move the character 0, 1, or 2 spaces. The choice does not change the type of movement possible.}
+    \item If an effect lists multiple amounts of movement, the player can only choose one and cannot modify their choice after the fact.
+      \emph{For example, ``Advance 1, 2, or 3 spaces'' means the player must choose one of the three options, and then having moved their character, cannot choose to move or modify the position of their character after.}
+    \item Movement amounts can never be negative. Any effect that would reduce movement below 0 keeps it at 0.
+    \item All movement effects are triggered effects, written in the form of, ``\textbf{[Trigger]}: [Movement Type] [Amount]'', except \textbf{Move directly}, which does not specify an amount.
+    \item If an effect states a character cannot ``move over'' an opponent, the character can only move adjacent to the opponent. Moving from one side of an opponent to another can't happen, with one exception:
+      \subsubrules{\item \textbf{Move directly} allows a character to move from one side of an opponent to another while effects that state a character cannot ``move over'' the opponent are in place. This is because the character is not entering and exiting adjacent spaces, but teleporting.}
   }
 }
 
